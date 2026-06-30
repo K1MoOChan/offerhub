@@ -1,0 +1,17 @@
+spring:
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/offerhub
+    password: 123456
+  # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: update # 自动根据实体更新表
+    show-sql: true # 打印执行的SQL语句
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+server:
+  port: 8080
